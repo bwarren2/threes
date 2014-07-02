@@ -1,0 +1,11 @@
+wheel==0.23.0
+Jinja2==2.7.3
+MarkupSafe==0.23
+PyYAML==3.11
+argparse==1.2.1
+binaryornot==0.3.0
+cookiecutter==0.7.1
+py==1.4.20
+tox==1.7.1
+virtualenv==1.11.6
+wsgiref==0.1.2
