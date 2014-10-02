@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from board import Board
 
 help_str = """

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from Queue import Queue
 from random import choice
 

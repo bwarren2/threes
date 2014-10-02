@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from tile import Tile
 from bag import Bag
 import random
