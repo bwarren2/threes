@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 reqs = map(str.strip, open("requirements.txt").readlines())
 
@@ -22,7 +21,7 @@ test_requirements = [
 
 setup(
     name='threes',
-    version='0.1.8',
+    version='0.1.9',
     description='Implementing the tile merge game',
     long_description=readme + '\n\n' + history,
     author='Ben Warren',
