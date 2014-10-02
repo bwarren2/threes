@@ -13,7 +13,10 @@ class Bag(object):
         self.next = None
         self.pool = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
 
-    def draw(self):
+    def __repr__(self):
+        return "Next: {0}. {1} remain.".format(self.next, self.queue.qsize())
+
+    def draw(self, max_val):
         """ Takes the next value from the basic tile queue."""
         if self.queue.empty():
             self.shuffle()

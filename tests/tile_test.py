@@ -19,38 +19,38 @@ class TileTest(unittest.TestCase):
         self.assertEqual(Tile(6144).score(), 531441)
 
     def test_tile_merge(self):
-        blob, food, moved = Tile(3).merge(Tile())
+        blob, food, moved, merged = Tile(3).merge(Tile())
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(3).value, Tile(0).value, False)
+            (blob.value, food.value, moved, merged),
+            (Tile(3).value, Tile(0).value, False, False)
         )
 
-        blob, food, moved = Tile(1).merge(Tile(2))
+        blob, food, moved, merged = Tile(1).merge(Tile(2))
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(3).value, Tile(0).value, True)
+            (blob.value, food.value, moved, merged),
+            (Tile(3).value, Tile(0).value, True, True)
         )
 
-        blob, food, moved = Tile(2).merge(Tile(1))
+        blob, food, moved, merged = Tile(2).merge(Tile(1))
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(3).value, Tile(0).value, True)
+            (blob.value, food.value, moved, merged),
+            (Tile(3).value, Tile(0).value, True, True)
         )
 
-        blob, food, moved = Tile(3).merge(Tile(3))
+        blob, food, moved, merged = Tile(3).merge(Tile(3))
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(6).value, Tile(0).value, True)
+            (blob.value, food.value, moved, merged),
+            (Tile(6).value, Tile(0).value, True, True)
         )
 
-        blob, food, moved = Tile(0).merge(Tile(0))
+        blob, food, moved, merged = Tile(0).merge(Tile(0))
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(0).value, Tile(0).value, False)
+            (blob.value, food.value, moved, merged),
+            (Tile(0).value, Tile(0).value, False, False)
         )
 
-        blob, food, moved = Tile(0).merge(Tile(3))
+        blob, food, moved, merged = Tile(0).merge(Tile(3))
         self.assertEqual(
-            (blob.value, food.value, moved),
-            (Tile(3).value, Tile(0).value, True)
+            (blob.value, food.value, moved, merged),
+            (Tile(3).value, Tile(0).value, True, False)
         )
