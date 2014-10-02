@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from pip.req import parse_requirements
-install_reqs = parse_requirements('requirements.txt')
-reqs = [str(ir.req) for ir in install_reqs]
+reqs = map(str.strip, open("requirements.txt").readlines())
 
 try:
     from setuptools import setup
@@ -24,7 +22,7 @@ test_requirements = [
 
 setup(
     name='threes',
-    version='0.1.4',
+    version='0.1.5',
     description='Implementing the tile merge game',
     long_description=readme + '\n\n' + history,
     author='Ben Warren',
