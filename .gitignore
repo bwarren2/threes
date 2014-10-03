@@ -43,4 +43,4 @@ output/*/index.html
 docs/_build
 
 #Sublime
-.gitignore.sublime-project
+threes.sublime-project
