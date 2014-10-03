@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='threes',
-    version='0.1.11',
+    version='0.1.12',
     description='Implementing the tile merge game',
     long_description=readme + '\n\n' + history,
     author='Ben Warren',
