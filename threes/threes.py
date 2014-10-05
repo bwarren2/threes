@@ -2,10 +2,10 @@ from board import Board
 
 help_str = """
             Your options are:
-            up (u): shift the board up.
-            down (d): shift the board down.
-            left (l): shift the board left.
-            right (r): shift the board right.
+            up (w): shift the board up.
+            down (s): shift the board down.
+            left (a): shift the board left.
+            right (d): shift the board right.
 
             score (s): score the board and end the game.
             quit (q): quit the game.
@@ -28,35 +28,32 @@ def new_game():
     while True:
 
         print board
-        choice = raw_input("(u, d, l, r, s, q, n, h?): ")
+        choice = raw_input("(w, s, a, d, s, q, h?): ")
 
-        if choice == 's':
-            raise Exception
+        if choice == 'w':
+            board.shift('up')
+
+        elif choice == 's':
+            board.shift('down')
+
+        elif choice == 'a':
+            board.shift('left')
+
+        elif choice == 'd':
+            board.shift('right')
+
+        elif choice == 'sc':
+            print board.score()
+            print ""
 
         elif choice == 'q':
             break
 
-        elif choice == 'n':
-            raise Exception
-
         elif choice == 'h':
             print help_str
 
-        elif choice == 'u':
-            board.shift('up')
-
-        elif choice == 'd':
-            board.shift('down')
-
-        elif choice == 'l':
-            board.shift('left')
-
-        elif choice == 'r':
-            board.shift('right')
-
         else:
             print help_str
-
 
 if __name__ == '__main__':
     new_game()

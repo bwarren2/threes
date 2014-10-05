@@ -23,7 +23,7 @@ class Tile(object):
             return 0
         else:
             exp = log(self.value/3, 2)
-            return 3**(exp + 1)
+            return int(3**(exp + 1))
 
     def merge(self, tile):
         """ Returns two tiles, one for the slot this tile is in and one for the slot this tile is absorbing, whether a nonzero tile moved, and whether there were merges. """

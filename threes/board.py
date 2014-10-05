@@ -125,3 +125,10 @@ class Board(object):
             self.seed()
         else:
             self.startup = False
+
+    def score(self):
+        score = 0
+        for row in self.cells:
+            for tile in row:
+                score += tile.score()
+        return score

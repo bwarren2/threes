@@ -17,6 +17,7 @@ class TileTest(unittest.TestCase):
         self.assertEqual(Tile(6).score(), 9)
         self.assertEqual(Tile(384).score(), 6561)
         self.assertEqual(Tile(6144).score(), 531441)
+        self.assertEqual(Tile(3072).score(), 177147)
 
     def test_tile_merge(self):
         blob, food, moved, merged = Tile(3).merge(Tile())
