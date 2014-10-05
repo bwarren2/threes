@@ -12,13 +12,15 @@ threes
         :target: https://pypi.python.org/pypi/threes
 
 
-## Implementing the tile merge game
+Implementing the tile merge game
 
 Installing the game:
+===============================
 
     pip install threes
 
-## Playing the game:
+Playing the game:
+===============================
 
 In a python shell:
 
@@ -26,7 +28,8 @@ In a python shell:
 
     threes.new_game()
 
-## Rules
+Rules
+===============================
 
 
 (0) Shift the tiles on the board with w/s/a/d.  Each shift is one space.  If a tile would be shifted into another tile, the former tile can be merged into the latter if either:
