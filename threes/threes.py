@@ -43,7 +43,8 @@ def new_game():
             board.shift('right')
 
         elif choice == 'sc':
-            print board.score()
+            print ""
+            print "Your score: {0}".format(board.score())
             print ""
 
         elif choice == 'q':
